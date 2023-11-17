@@ -9,21 +9,9 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Set variables
-read -rp "Set the Socks5 port (default: 9999): " PORT
-PORT=${PORT:-9999}
-
-# Check if the port is available
-lsof -i:"$PORT" | grep -i -q "listen"
-if [ $? -eq 0 ]; then
-    echo "Port $PORT is already in use. Please choose a different port."
-    exit 1
-fi
-
-# Set Socks5 username and password
-read -rp "Set the Socks5 username (default: caishen891): " USER
-USER=${USER:-caishen891}
-read -rp "Set the Socks5 password (default: 999999): " PASSWD
-PASSWD=${PASSWD:-999999}
+PORT=9999
+USER=caishen891
+PASSWD=999999
 
 # Install necessary packages
 apt update && apt install -y lsof wget
