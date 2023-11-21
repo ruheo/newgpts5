@@ -95,4 +95,4 @@ IPv6=$(curl -6 ip.sb)
 echo -e "IPv4: $IPv4\nIPv6: $IPv6\nPort: $PORT\nUsername: $USER\nPassword: $PASSWD"
 
 # Done
-echo "Socks5 proxy installed and configured successfully."
+echo "Socks5代理安装并配置成功."
