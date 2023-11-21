@@ -92,7 +92,7 @@ systemctl start sockd.service
 # Display connection information
 IPv4=$(curl -4 ip.sb)
 IPv6=$(curl -6 ip.sb)
-echo -e "IPv4: $IPv4\nIPv6: $IPv6\nPort: $PORT\nUsername: $USER\nPassword: $PASSWD"
+echo -e "IPv4: $IPv4\nIPv6: $IPv6\n端口: $PORT\n用户名: $USER\n密码: $PASSWD"
 
 # Done
 echo "Socks5代理安装并配置成功."
